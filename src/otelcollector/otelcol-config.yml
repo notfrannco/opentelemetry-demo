@@ -1,0 +1,60 @@
+# Copyright The OpenTelemetry Authors
+# SPDX-License-Identifier: Apache-2.0
+
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+        cors:
+          allowed_origins:
+            - "http://*"
+            - "https://*"
+
+exporters:
+  otlphttp/elastic:
+    endpoint: "http://192.168.100.71:8200"
+    headers:
+      Authorization: "Bearer supersecrettoken"
+  otlp:
+    endpoint: "jaeger:4317"
+    tls:
+      insecure: true
+  logging:
+  prometheus:
+    endpoint: "otelcol:9464"
+    resource_to_telemetry_conversion:
+      enabled: true
+    enable_open_metrics: true
+processors:
+  batch:
+  spanmetrics:
+    metrics_exporter: prometheus
+  # temporary measure until description is fixed in .NET
+  transform:
+    metric_statements:
+      - context: metric
+        statements:
+          - set(description, "Measures the duration of inbound HTTP requests") where name == "http.server.duration"
+  filter:
+    metrics:
+      exclude:
+        match_type: strict
+        metric_names:
+          - queueSize
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [spanmetrics, batch]
+      exporters: [otlp, logging, otlphttp/elastic]
+    metrics:
+      receivers: [otlp]
+      processors: [filter, transform, batch]
+      exporters: [prometheus, logging, otlphttp/elastic]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, otlphttp/elastic]

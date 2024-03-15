@@ -1,0 +1,109 @@
+# Copyright The OpenTelemetry Authors
+# SPDX-License-Identifier: Apache-2.0
+# extra settings to be merged into OpenTelemetry Collector configuration
+# do not delete this file
+##exporters:
+##  elasticsearch/lab:
+##    tls:
+##      #insecure: true
+##      insecure_skip_verify: true
+##    endpoints: [https://192.168.100.71:9200]
+##    #traces_index: trace_index
+##    logs_index: otel_lab_index
+##    user: elastic
+##    password: changeme
+##    #api_key: supersecrettoken
+##
+  #elasticsearch/trace:
+  #  tls:
+  #    insecure: true
+  #    #insecure_skip_verify: true
+  #  endpoints: [https://192.168.100.71:9200]
+  #  traces_index: trace_index
+  #  ca_file: /etc/ca.crt
+  #  user: elastic
+  #  password: changeme
+  #  #api_key: AvFsEiPs==
+  #elasticsearch/log:
+  #  tls:
+  #    insecure: true
+  #    insecure_skip_verify: true
+  #  endpoints: [https://192.168.100.71:9200/]
+  #  logs_index: my_log_index
+  #  user: elastic
+  #  password: changeme
+  #  #api_key: AvFsEiPs==
+  #  sending_queue:
+  #    enabled: true
+
+##service:
+##  pipelines:
+##    traces:
+##      exporters: [ elasticsearch/lab]
+##    #logs:
+##    #  exporters: [logging, elasticsearch/log]
+##
+
+
+
+
+
+#exporters:
+#  elasticsearch/log:
+#    endpoints:
+#    - https://192.168.100.71:9200
+#    logs_index: otel_log_index
+#    password: changeme
+#    tls:
+#      insecure_skip_verify: true
+#    user: elastic
+#  elasticsearch/trace:
+#    endpoints:
+#    - https://192.168.100.71:9200
+#    password: changeme
+#    tls:
+#      insecure_skip_verify: true
+#    traces_index: traces-apm-default
+#    user: elastic
+#  logging: {}
+#extensions:
+#  health_check: {}
+#  memory_ballast:
+#    size_in_percentage: 40
+#processors:
+#  batch: {}
+#  memory_limiter:
+#    check_interval: 5s
+#    limit_percentage: 80
+#    spike_limit_percentage: 25
+#service:
+#  pipelines:
+#    logs:
+#      exporters:
+#      - elasticsearch/log
+#    traces:
+#      exporters:
+#      - elasticsearch/trace
+
+
+
+# test with APM endpoint
+#exporters:
+#  otlphttp/elastic:
+#    endpoint: "http://192.168.100.71:8200"
+#    compression: none
+#    headers:
+#      Autorization: "Bearer supersecrettoken"
+#
+#
+#service:
+#  pipelines:
+#    traces:
+#      exporters:
+#      - otlphttp/elastic
+#    metrics:
+#      exporters:
+#      - otlphttp/elastic
+#    logs:
+#      exporters:
+#      - otlphttp/elastic
