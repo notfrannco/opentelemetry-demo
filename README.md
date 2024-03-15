@@ -64,6 +64,21 @@ keeping it up to date for you.
 | [Elastic](https://github.com/elastic/opentelemetry-demo)                                                          |                                                                   |                                                                                              |
 |                                                                                                                   |                                                                   |                                                                                              |
 
+
+
+
+
+|                                                                                                                   |                                                                   |                                                                                              |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| [Wes Store](http://192.168.100.71:8080/)                                       |                                
+| [Grafana](http://192.168.100.71:8080/grafana/) |                            
+| [Load Generator UI](http://192.168.100.71:8080/loadgen/)                                                       |
+| [Jaeger UI](http://192.168.100.71:8080/jaeger/ui/)                         | 
+
+
+
+
+
 ## Contributing
 
 To get involved with the project see our [CONTRIBUTING](CONTRIBUTING.md)
