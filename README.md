@@ -29,70 +29,16 @@ demo oficial de la coumindad de Opentelemtry, modifique la version de docker-com
 |   **Jaeger UI**     |   http://192.168.100.71:8080/jaeger/ui/      |
 
 
-## Demos featuring the Astronomy Shop
+## Que es Opentelemetry?
+<br /> Opentelementry es un projecto opensource mantenida por la [CNCF](https://www.cncf.io/projects/), y su objetivo es estandarizar el el shipping the telementry data ([traces](https://opentelemetry.io/docs/concepts/signals/traces/), [metrics](https://opentelemetry.io/docs/concepts/signals/metrics/), [logs](https://opentelemetry.io/docs/concepts/signals/logs/))
 
-We welcome any vendor to fork the project to demonstrate their services and
-adding a link below. The community is committed to maintaining the project and
-keeping it up to date for you.
-
-|                                                                                                                   |                                                                   |                                                                                              |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| [AlibabaCloud LogService](https://github.com/aliyun-sls/opentelemetry-demo)                                       | [Grafana Labs](https://github.com/grafana/opentelemetry-demo)     | [New Relic](https://github.com/newrelic/opentelemetry-demo)                                  |
-| [AppDynamics](https://www.appdynamics.com/blog/cloud/how-to-observe-opentelemetry-demo-app-in-appdynamics-cloud/) | [Helios](https://otelsandbox.gethelios.dev)                       | [Sentry](https://github.com/getsentry/opentelemetry-demo)                                    |
-| [Aspecto](https://github.com/aspecto-io/opentelemetry-demo)                                                       | [Honeycomb.io](https://github.com/honeycombio/opentelemetry-demo) | [Splunk](https://github.com/signalfx/opentelemetry-demo)                                     |
-| [Coralogix](https://coralogix.com/blog/configure-otel-demo-send-telemetry-data-coralogix)                         | [Instana](https://github.com/instana/opentelemetry-demo)          | [Sumo Logic](https://www.sumologic.com/blog/common-opentelemetry-demo-application/)          |
-| [Datadog](https://github.com/DataDog/opentelemetry-demo)                                                          | [Kloudfuse](https://github.com/kloudfuse/opentelemetry-demo)      | [TelemetryHub](https://github.com/TelemetryHub/opentelemetry-demo/tree/telemetryhub-backend) |
-| [Dynatrace](https://www.dynatrace.com/news/blog/opentelemetry-demo-application-with-dynatrace/)                   | [Lightstep](https://github.com/lightstep/opentelemetry-demo)      | [Uptrace](https://github.com/uptrace/uptrace/tree/master/example/opentelemetry-demo)         |
-| [Elastic](https://github.com/elastic/opentelemetry-demo)                                                          |                                                                   |                                                                                              |
-|                                                                                                                   |                                                                   |                                                                                              |
+## Como funciona Opentelemetry?
+<br /> Opentelemetry provee una collecion de [APIs, SDKs](https://opentelemetry.io/docs/languages/), para estandarizar la ingesta, transformacion y envio de datos a un backend de nuestra preferencia
+<br /><br /><br />**Diagrama de Arquitectura 1**:
+![opentelemetryarchitecture](https://github.com/notfrannco/opentelemetry-demo/assets/19764680/3b8021ba-cc69-4bfc-9df6-2aa6fa67a356)
 
 
 
 
 
-|                                                                                                                   |                                                                   |                                                                                              |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| [Wes Store](http://192.168.100.71:8080/)                                       |                                
-| [Grafana](http://192.168.100.71:8080/grafana/) |                            
-| [Load Generator UI](http://192.168.100.71:8080/loadgen/)                                                       |
-| [Jaeger UI](http://192.168.100.71:8080/jaeger/ui/)                         | 
 
-
-
-
-
-## Contributing
-
-To get involved with the project see our [CONTRIBUTING](CONTRIBUTING.md)
-documentation. Our [SIG Calls](CONTRIBUTING.md#join-a-sig-call) are Mondays at
-8:15 AM PST and anyone is welcome.
-
-## Project leadership
-
-[Maintainers](https://github.com/open-telemetry/community/blob/main/community-membership.md#maintainer)
-([@open-telemetry/demo-maintainers](https://github.com/orgs/open-telemetry/teams/demo-maintainers)):
-
-- [Austin Parker](https://github.com/austinlparker), Lightstep
-- [Carter Socha](https://github.com/cartersocha), Lightstep
-- [Juliano Costa](https://github.com/julianocosta89), Dynatrace
-- [Pierre Tessier](https://github.com/puckpuck), Honeycomb
-
-[Approvers](https://github.com/open-telemetry/community/blob/main/community-membership.md#approver)
-([@open-telemetry/demo-approvers](https://github.com/orgs/open-telemetry/teams/demo-approvers)):
-
-- [Mikko Viitanen](https://github.com/mviitane), Dynatrace
-- [Penghan Wang](https://github.com/wph95), AppDynamics
-- [Reiley Yang](https://github.com/reyang), Microsoft
-- [Ziqi Zhao](https://github.com/fatsheep9146), Alibaba
-
-Emeritus:
-
-- [Michael Maxwell](https://github.com/mic-max)
-- [Morgan McLean](https://github.com/mtwo)
-
-### Thanks to all the people who have contributed
-
-[![contributors](https://contributors-img.web.app/image?repo=open-telemetry/opentelemetry-demo)](https://github.com/open-telemetry/opentelemetry-demo/graphs/contributors)
-
-[docs]: https://opentelemetry.io/docs/demo/
-# opentelemetry-demo
