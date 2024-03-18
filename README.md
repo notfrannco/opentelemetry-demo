@@ -34,11 +34,28 @@ demo oficial de la coumindad de Opentelemtry, modifique la version de docker-com
 
 ## Como funciona Opentelemetry?
 <br /> Opentelemetry provee una collecion de [APIs, SDKs](https://opentelemetry.io/docs/languages/), para estandarizar la ingesta, transformacion y envio de datos a un backend de nuestra preferencia
+
 <br /><br /><br />**Diagrama de Arquitectura 1**:
+![opentelemetrystack](https://github.com/notfrannco/opentelemetry-demo/assets/19764680/5f28ff9c-283f-43c7-9050-25f16087f49f)
+
+
+<br /><br /><br />**Diagrama de Arquitectura 2**: [source](https://www.aspecto.io/blog/opentelemetry-collector-guide/)
 ![opentelemetryarchitecture](https://github.com/notfrannco/opentelemetry-demo/assets/19764680/3b8021ba-cc69-4bfc-9df6-2aa6fa67a356)
 
 
+<br /><br /><br />**Diagrama de Arquitectura 3 (Implementacion con Elastic Stack)**: [source](https://www.elastic.co/blog/native-opentelemetry-support-in-elastic-observability)
+![exampleintegrationwithelastic](https://github.com/notfrannco/opentelemetry-demo/assets/19764680/cace1c2a-2aa5-4627-bc25-1471c7d76e05)
 
 
+## Opentelemetry Observaciones
+<br />**Pros**:
+- Vendor Netural
+- Rapida adopcion por la comunidad, en [2023](https://www.cncf.io/blog/2023/10/27/october-2023-where-we-are-with-velocity-of-cncf-lf-and-top-30-open-source-projects/) se posiciono como el 2 proyecto mas activo de la [CNCF](https://www.cncf.io/) solo detras de kubernetes
+
+<br />**Cons**:
+- El proyecto es relativamente nuevo (2019) por ende no hay documentacion extensa disponible
+- Complejidad de adopcion alta
+  -  Nuevos terminos y conceptos que se necesitan aprender y profundizar.
+  -  compllejo y tedioso para los que lo implementan (la parte de desarrollo, SDK), sencillo para los que los consumen (monitoring tools integration, la parte "DevOps")
 
 
