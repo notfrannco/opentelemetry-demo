@@ -1,51 +1,33 @@
-<!-- markdownlint-disable-next-line -->
-# <img src="https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png" alt="OTel logo" width="45"> OpenTelemetry Demo
+# Elastic Stack on Docker
+## Elastic Agent, Fleet, and Elastic APM
 
-[![Slack](https://img.shields.io/badge/slack-@cncf/otel/demo-brightgreen.svg?logo=slack)](https://cloud-native.slack.com/archives/C03B4CWV4DA)
-[![Version](https://img.shields.io/github/v/release/open-telemetry/opentelemetry-demo?color=blueviolet)](https://github.com/open-telemetry/opentelemetry-demo/releases)
-[![Commits](https://img.shields.io/github/commits-since/open-telemetry/opentelemetry-demo/latest?color=ff69b4&include_prereleases)](https://github.com/open-telemetry/opentelemetry-demo/graphs/commit-activity)
-[![Downloads](https://img.shields.io/docker/pulls/otel/demo)](https://hub.docker.com/r/otel/demo)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg?color=red)](https://github.com/open-telemetry/opentelemetry-demo/blob/main/LICENSE)
 
-## Welcome to the OpenTelemetry Astronomy Shop Demo
+![arquitecturadelelasticstack](https://github.com/notfrannco/opentelemetry-demo/assets/19764680/eec88277-96dc-4727-9cb3-8ec975f85e9e)
+#### Overview de la arquitectura general
+<br />**Setup Certificate**: Configura los certificados autofirmados que se utilizaran para la comunicacio tls entre los distintos componentes del stack.
+<br />**Elasticsearch**: Levanta un servidor elasticsearch a ser utilizado para la demo.
+<br />**Setup Certificate**: Levanta un servidor kibana para la visualizacion de los distintos dashboard que se analizaran en la demo.
+<br />**Metricbeat y Filebeat**: Levanta los dos beat para prueba de integracion "legacy", es recomendado utilizar Fleet en las versiones de elasticstack 8+
+<br />**Logstash**: Servidor de logstash que se utilizaran a futuro para filtro especifico de datos.
+<br />**Fleet Server**: Nueva forma de administrar los agentes de elastic stack
+<br />**Web APP**: Web demo para demostracion de la APM (http://192.168.100.71:8000/).
+<br />**OBS**: Este docker compose esta basada en un blog oficial hecho por la comunidad de elastic stack, realice varios cambios para ajustar a mis necesidades especficas para la demo
+<br />**Blog 1**: https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-compose
+<br />**Blog 2**: https://www.elastic.co/blog/getting-started-with-the-elastic-stack-and-docker-compose-part-2
+ 
+# Opentelemtery-demo 
+demo oficial de la coumindad de Opentelemtry, modifique la version de docker-compose, para mas detalle del codigo de los microservicios visitar la doc oficial
+<br />**code**: https://github.com/javaducky/opentelemetry-demo/tree/main 
+<br /> **doc of docker-compose version**: https://opentelemetry.io/docs/demo/docker-deployment/
 
-This repository contains the OpenTelemetry Astronomy Shop, a microservice-based
-distributed system intended to illustrate the implementation of OpenTelemetry in
-a near real-world environment.
+## Opentelemtery URls
+| Funcion | URL |
+| ------ | ------ |
+|   **Web STore**     |   http://192.168.100.71:8080/      |
+|     **Grafana**   |  http://192.168.100.71:8080/grafana/       |
+|  **Load Generator UI** |     http://192.168.100.71:8080/loadgen/        |
+|   **Jaeger UI**     |   http://192.168.100.71:8080/jaeger/ui/      |
 
-Our goals are threefold:
-
-- Provide a realistic example of a distributed system that can be used to
-  demonstrate OpenTelemetry instrumentation and observability.
-- Build a base for vendors, tooling authors, and others to extend and
-  demonstrate their OpenTelemetry integrations.
-- Create a living example for OpenTelemetry contributors to use for testing new
-  versions of the API, SDK, and other components or enhancements.
-
-We've already made [huge
-progress](https://github.com/open-telemetry/opentelemetry-demo/blob/main/CHANGELOG.md),
-and development is ongoing. We hope to represent the full feature set of
-OpenTelemetry across its languages in the future.
-
-If you'd like to help (**which we would love**), check out our [contributing
-guidance](./CONTRIBUTING.md).
-
-If you'd like to extend this demo or maintain a fork of it, read our
-[fork guidance](https://opentelemetry.io/docs/demo/forking/).
-
-## Quick start
-
-You can be up and running with the demo in a few minutes. Check out the docs for
-your preferred deployment method:
-
-- [Docker](https://opentelemetry.io/docs/demo/docker_deployment/)
-- [Kubernetes](https://opentelemetry.io/docs/demo/kubernetes_deployment/)
-
-## Documentation
-
-For detailed documentation, see [Demo Documentation][docs]. If you're curious
-about a specific feature, the [docs landing page][docs] can point you in the
-right direction.
 
 ## Demos featuring the Astronomy Shop
 
