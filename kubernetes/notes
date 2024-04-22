@@ -1,0 +1,45 @@
+# configure the namespce
+kubectl apply -f ns.yml 
+
+# install the demo
+cd opentelemetry-app
+kubectl apply -f .
+
+
+# install the opentelemetry collector
+cd opentelemetry-collector
+kubectl apply -f .
+
+
+# install jaeger
+cd jaeger
+kubectl apply -f .
+
+# install Prometheus
+cd prometheus
+kubectl apply -f .
+
+
+# install grafrana
+cd grafana
+kubectl apply -f .
+
+
+# editar el servicio svc/opentelemetry-demo-frontendproxy
+configurrar el 'port: 80' y el 'type: LoadBalancer'
+
+
+# urls
+web store: http://ip/
+Grafana: http://ip/grafana
+Feature flags UI: http://ip/feature
+Load Generator UI: http://ip/loadgen/
+Jaeger UI: http://ip/jaeger/ui/
+prometheus
+
+
+# from grafrana, useful querys Explore > Prometheus
+# all endpoint that are being monitor
+- To search all of the time series data points grouping by job
+count({__name__=~".+"} by (job))
+

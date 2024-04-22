@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: aspire-dashboard
+  name: aspire-dashboard
+  namespace: otel-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aspire-dashboard
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: aspire-dashboard
+    spec:
+      containers:
+      - image: mcr.microsoft.com/dotnet/nightly/aspire-dashboard:8.0.0-preview.4
+        name: aspire-dashboard
+        resources: {}
+status: {}
